@@ -5,4 +5,3 @@ if __name__ == "__main__":
         if (dir(hidden_4)[i][:2] == "__"):
             continue
         print(dir(hidden_4)[i])
-
