@@ -1,26 +1,26 @@
 #include "lists.h"
 int is_palindrome(listint_t **head)
 {
-	listint_t *current = *head, *palin = *head;
-	int counter = 0, i = 0, j = 0;
+	listint_t *cur_used = *head, *temp = *head;
+	int count = 0, i = 0, j = 0;
 
 	if (!*head)
 		return (1);
 
-	while (current)
+	while (cur_used)
 	{
-		current = current->next;
-		counter++;
+		cur_used = cur_used->next;
+		count++;
 	}
-	current = *head;
-	for (i = 1; i <= counter; i++)
+	cur_used = *head;
+	for (i = 1; i <= count; i++)
 	{
-		for (j = i; j <= counter - i; j++)
-			palin = palin->next;
-		if (current->n != palin->n)
+		for (j = i; j <= count - i; j++)
+			temp = temp->next;
+		if (cur_used->n != temp->n)
 			return (0);
-		current = current->next;
-		palin = current;
+		cur_used = cur_used->next;
+		temp = cur_used;
 	}
 	return (1);
 }
