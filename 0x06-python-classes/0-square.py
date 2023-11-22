@@ -6,4 +6,3 @@ class Square:
 if __name__ == "__main--":
     my_square = Square()
     print(type(my_square))
-
