@@ -1,7 +1,9 @@
 #!/usr/bin/python3
-# This is the "Square"  class.
+"""
+This is the "Square"  class.
+"""
 
 
 class Square:
-    # A simple Square class
+    """A simple Square class"""
     pass
