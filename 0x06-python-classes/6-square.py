@@ -5,8 +5,8 @@ this class modules a square OOPs program
 
 
 class Square:
-    """Tis class instances prints private class size and public class attribute arae
-    also makes judgment based on data passed
+    """Tis class instances prints private class size and public
+    class attribute arae also makes judgment based on data passed
     """
     def __init__(self, size=0, position=(0, 0)):
         self.size = size
@@ -32,7 +32,9 @@ class Square:
 
     @position.setter
     def position(self, value):
-        if not isinstance(value, tuple) or len(value) != 2 or not all(isinstance(i, int) for i in value) or any(i < 0 for i in value):
+        if not isinstance(value, tuple) or len(value) != 2
+        or not all(isinstance(i, int) for i in value) or any
+        (i < 0 for i in value):
             raise TypeError("position must be a tuple of 2 positive integers")
 
         self.__position = value
