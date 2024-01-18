@@ -1,7 +1,10 @@
--- creates the table unique_id on your MySQL server
--- cat 5-unique_id.sql | sudo mysql -hlocalhost -uroot -p hbtn_0d_2
--- echo 'INSERT INTO unique_id (id, name) VALUES (89, "Best School");' | sudo mysql -hlocalhost -uroot -p hbtn_0d_2
--- echo 'SELECT * FROM unique_id;' | sudo mysql -hlocalhost -uroot -p hbtn_0d_2
--- echo 'INSERT INTO unique_id (id, name) VALUES (89, "Best");' | sudo mysql -hlocalhost -uroot -p hbtn_0d_2
--- echo 'SELECT * FROM unique_id;' | sudo mysql -hlocalhost -uroot -p hbtn_0d_2
-CREATE TABLE IF NOT EXISTS unique_id (id INT DEFAULT 1 UNIQUE, name VARCHAR(256))
+-- creates the database hbtn_0d_usa and the table states (in the database hbtn_0d_usa)
+-- cat 6-states.sql | sudo mysql -hlocalhost -uroot -p
+-- echo 'SELECT * FROM states;' | sudo mysql -hlocalhost -uroot -p hbtn_0d_usa
+CREATE DATABASE IF NOT EXISTS hbtn_0d_usa;
+USE hbtn_0d_usa
+CREATE TABLE
+    IF NOT EXISTS states (
+        id INT AUTO_INCREMENT NOT NULL PRIMARY KEY UNIQUE,
+        name VARCHAR(256)
+    )
