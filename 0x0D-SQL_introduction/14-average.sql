@@ -1,11 +1,4 @@
--- lists the number of records with the same score in the table second_table
--- cat 15-groups.sql | sudo mysql -hlocalhost -uroot -p hbtn_0c_0
-SELECT
-    score,
-    COUNT(*) AS number
-FROM
-    second_table
-GROUP BY
-    score
-ORDER BY
-    number DESC;
+-- computes the score average of all records in the table second_table
+-- cat 14-average.sql | sudo mysql -hlocalhost -uroot -p hbtn_0c_0
+SELECT AVG(score) AS average
+FROM second_table;
