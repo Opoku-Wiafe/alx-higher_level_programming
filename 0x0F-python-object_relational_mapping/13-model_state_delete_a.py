@@ -15,11 +15,11 @@ if __name__ == "__main__":
     )
 
     _Session = sessionmaker(bind=code_base)
-    this_session = _Session()
-    delete_this_States = this_session.query(State).filter(State.name.like(f'%a%')).all()
-    if delete_this_States:
-        for state in delete_this_States:
-            this_session.delete(state)
-        this_session.commit()
+    this_sess = _Session()
+    delete_State = this_sess.query(State).filter(State.name.like(f'%a%')).all()
+    if delete_State:
+        for state in delete_State:
+            this_sess.delete(state)
+        this_sess.commit()
 
-    this_session.close()
+    this_sess.close()
