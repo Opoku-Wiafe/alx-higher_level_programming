@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""POST request to http://0.0.0.0:5000/search_user with the letter as a param"""
+"""POST request to http://0.0.0.0:5000/search_user with the letter as a par"""
 import requests
 import sys
 
